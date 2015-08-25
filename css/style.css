@@ -1,0 +1,78 @@
+.navBorderLine{
+    border-top: 1px #fff solid;
+}
+.navBorderLine i{
+    color: rgb(254,100,4);
+}
+
+.myWrapper {
+    margin: 0;
+    padding: 2rem;
+}
+.heading_row{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(51, 51, 51);
+    color: rgb(242,242,242);
+    margin-top: 50px;
+    margin-left: 225px;
+}
+.myHeader{
+    font-size: 2.4rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    margin: 0;
+    border-bottom:none;
+    display: inline-block;
+}
+.myFa{
+    color: rgb(254,100,4);
+    font-size: 2.8rem;
+
+}
+.myHeader small {
+    font-size: 1.8rem;
+    color: rgb(242,242,242);
+}
+.heading_right{
+    text-align: right;
+}
+.subHeading_row{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(77, 77, 77);
+    color: rgb(254,100,4);
+    margin-top: 100px;
+    margin-left: 225px;
+
+}
+
+.myContent{
+    background-color: #fff;
+    /*height: 100%;*/
+    width: 100%;
+}
+
+@media(max-width:768px) {
+ .heading_row{
+        /*position: relative;*/
+        margin-top: 50px;
+        margin-left: 0;
+        z-index: -1;
+    }
+    .subHeading_row{
+        /*position: relative;*/
+        margin-top: 100px;
+        margin-left: 0;
+        z-index: 0;
+    }
+    .myHeader {
+        font-size: 1.8rem;
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+        /* or change margin-top to :90px in .subHeading_row*/
+    }
+    .myFa{
+        font-size: 2.2rem;
+    }
+}
