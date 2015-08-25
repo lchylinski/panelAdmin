@@ -51,6 +51,7 @@
     background-color: #fff;
     /*height: 100%;*/
     width: 100%;
+    margin-top: 150px;
 }
 
 @media(max-width:768px) {
@@ -75,4 +76,8 @@
     .myFa{
         font-size: 2.2rem;
     }
+}
+
+.pageLoad{
+    margin-top: 2rem;
 }
