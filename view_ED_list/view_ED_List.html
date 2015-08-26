@@ -33,6 +33,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- ColorPicker -->
+    <link href="../colorPicker/css/bootstrap-colorpicker.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -116,15 +119,6 @@
 
             <div class="pageLoad" id="pageLoad"></div>
 
-            <div id="loadMe">LoadMe!!!</div>
-
-            <button class="btn btn-default" id="bgcolor">Change body bg color</button>
-
-            <!--<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, blanditiis dolore expedita-->
-                <!--minima obcaecati perspiciatis reprehenderit similique voluptatem. Accusamus adipisci asperiores debitis-->
-                <!--iusto necessitatibus non optio soluta! Nesciunt, vitae?-->
-            <!--</div>-->
-
         </div>
 
     <!-- jQuery -->
@@ -140,41 +134,19 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-    <script type="text/javascript" src="../js/colorPicker/jscolor.js"></script>
-
         <script>
-                // Catch the click on your a tag
+            // Catch the click on your a tag
             $("a").click(function(){
-            // Load the content of the page referenced in the a-tags href
-            $("#pageLoad").load($(this).attr("href"));
-            // Prevent browsers default behavior to follow the link when clicked
-            return false;
+                // Load the content of the page referenced in the a-tags href
+                $("#pageLoad").load($(this).attr("href"));
+                // Prevent browsers default behavior to follow the link when clicked
+                return false;
             });
         </script>
 
-        <script>
-            $("#bgcolor").ColorPickerSliders({
-                color: 'white',
-                previewontriggerelement: false,
-                title: 'Body background color',
-                order: {
-                    rgb: 1,
-                    preview: 2
-                },
-                onchange: function(container, color) {
-                    var body = $('#loadMe');
+    <!-- ColorPicker -->
+    <script src="../colorPicker/js/bootstrap-colorpicker.min.js"></script>
 
-                    body.css("background-color", color.tiny.toRgbString());
-
-                    if (color.cielch.l < 60) {
-                        body.css("color", "white");
-                    }
-                    else {
-                        body.css("color", "black");
-                    }
-                }
-            });
-        </script>
 
 </body>
 

@@ -1,10 +1,9 @@
 <link href="../view_phone/phonePart.css" rel="stylesheet">
 
 
-<!--w PhonePart: <input class="color" value="66ff00">-->
-<!--Input w ED: <input class="color {pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black'}">-->
-
-inputAJAX:  <input id="myField1">
+<button class="btn btn-default" id="bgcolor">Change body bg color</button>
+<button class="btn btn-default" id="myPicker">Change  bg color</button>
+<div id="nowy">IFSHSFBSFKSFKSFSF HFS</div>
 
 
 
@@ -53,7 +52,7 @@ inputAJAX:  <input id="myField1">
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="containerPhone">
         <div class="containerInfo">
             <p>Profile Info</p>
         </div>
@@ -80,36 +79,24 @@ inputAJAX:  <input id="myField1">
     </div>
 </div>
 
-<script type="text/javascript">
-    var myPicker = new jscolor.color(document.getElementById('myField1'), {pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black'})
-    myPicker.fromString('F4F2F1')  // now you can access API via 'myPicker' variable
-
-</script>
-
-<script type="text/javascript">
-    var pickerYourLogin = new jscolor.color(document.getElementById('pickerYourLogin'), {pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black',pickerPosition:'right'})
-//    pickerYourLogin.fromString('FFF')
-//    pickerSave.style.backgroundColor = '#'+this.color";
-</script>
-
 <script>
-//    $(document).on('click', '#myPickerId', function () {
-//        var obj = $(this)[0];
-//        if (!obj.hasPicker) {
-//            var picker = new jscolor.color(obj, {});  //
-//            obj.hasPicker = true;
-//            picker.showPicker();
-//        }
+
+    $('#bgcolor').colorpicker().on('changeColor.colorpicker', function(event){
+        bodyStyle.backgroundColor = event.color.toHex();
+    });
+
+//    // Use the JS file on the DOM element
+//    $('.containerPhone').click(function(){
+//        $('.containerPhone').colorpicker().on('changeColor', function(ev){
+//            $('.containerPhone').css({'background-color' : ev.color.toHex() });
+//        });
 //    });
-</script>
 
-<script>
-//(function () {
-//    var footer = document.getElementById('footer'),
-//    inputColor = footer.getElementsByTagName('input')[0];
-//
-//    inputColor.onchange = function () {
-//    footer.style.backgroundColor = '#' + this.color;
-//    };
-//    })();
+    $('.headerDown').click(function(){
+        $(this).colorpicker().on('changeColor', function(ev){
+            $('.headerDown').css({'background-color' : ev.color.toHex() });
+        });
+        console.log('kliknola');
+    });
+
 </script>
