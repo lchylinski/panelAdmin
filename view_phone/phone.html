@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>phone</title>
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -14,6 +13,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="phone.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href="../css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" type="text/css" href="../css/colorpicker.css" />
+
 </head>
 <body>
 
@@ -43,11 +46,12 @@
             <p>Profile Info</p>
         </div>
         <form action="#">
-            <div class="profileInfo">
+            <div class="profileInfo demo2">
                 <input type="text" placeholder="Your login">
                 <input type="text" placeholder="Name and surname">
                 <input type="text" placeholder="Email">
                 <input type="text" placeholder="Phone number">
+
             </div>
             <div class="containerInfo">
                 <p>Additional Data</p>
@@ -64,8 +68,17 @@
         </form>
     </div>
 </div>
+<div class="input-group demo2">
+    <input type="text" value="" class="form-control" />
+    <span class="input-group-addon"><i></i></span>
+</div>
+<script>
+    $(function(){
+        $('.demo2').colorpicker();
+    });
+</script>
 
-
-
+<script src="../js/bootstrap-colorpicker.js"></script>
+<script type="text/javascript" src="../js/colorpicker.js"></script>
 </body>
 </html>

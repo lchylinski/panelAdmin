@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta http-equiv="x-ua-compatible" content="IE=10">
+		<link href="colorPicker/css/bootstrap-colorpicker.css" rel="stylesheet">
+		<!-- Bootstrap Core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		
+		<div class="container">
+
+			<button class="btn btn-default" id="bgcolor">Change body bg color</button>
+			<button class="btn btn-default" id="colorpicker">Change  bg color</button>
+			<div id="nowy">IFSHSFBSFKSFKSFSF HFS</div>
+
+			<!--<a href="#" class="btn small demo colorpicker-element" id="demo_apidemo" data-color="rgb(255, 255, 255)">Change background color</a>-->
+
+		</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="colorPicker/js/bootstrap-colorpicker.min.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+		<script>
+
+			$('#bgcolor').colorpicker().on('changeColor.colorpicker', function(event){
+				bodyStyle.backgroundColor = event.color.toHex();
+			});
+
+			// Use the JS file on the DOM element
+			$('#colorpicker').colorpicker().on('changeColor', function(ev){
+				$('#nowy').css({'background-color' : ev.color.toHex() });
+			});
+
+		</script>
+
+	</body>
+</html>

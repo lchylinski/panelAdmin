@@ -1,0 +1,115 @@
+<link href="../view_phone/phonePart.css" rel="stylesheet">
+
+
+<!--w PhonePart: <input class="color" value="66ff00">-->
+<!--Input w ED: <input class="color {pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black'}">-->
+
+inputAJAX:  <input id="myField1">
+
+
+
+<!-- Page Heading -->
+<div class="row heading_row navbar-fixed-top">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <h1 class="page-header myHeader">
+            Customize your app !
+        </h1>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 heading_right">
+        <i class="fa fa-plus myFa"></i>
+        <h1 class=" myHeader"><small>Dodaj event</small></h1>
+    </div>
+</div>
+<!-- /.row -->
+<div class="row subHeading_row navbar-fixed-top">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <h1 class="page-header myHeader">
+            User Profile Name
+        </h1>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <h1 class=" myHeader"><small>Your Brand Colors:</small></h1>
+    </div>
+</div>
+<!-- /.row -->
+<div class="wrapper">
+    <div class="header">
+        <div class="row headerUp">
+            <div class="col-xs-5 operator">
+                Operator <i class="fa fa-wifi"></i>
+            </div>
+            <div class="col-xs-2 time">13:04</div>
+            <div class="col-xs-5 battery">
+                <i class="fa fa-battery-three-quarters"></i>
+            </div>
+        </div>
+        <div class="row headerDown">
+            <div class="col-xs-3 menu">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="col-xs-6 userProfile">User Profile</div>
+            <div class="col-xs-3 trophy">
+                <i class="fa fa-trophy"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="containerInfo">
+            <p>Profile Info</p>
+        </div>
+        <form action="#">
+            <div class="profileInfo">
+                <input type="text" placeholder="Your login" id="pickerYourLogin">
+                <input type="text" placeholder="Name and surname">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Phone number">
+            </div>
+            <div class="containerInfo">
+                <p>Additional Data</p>
+            </div>
+            <div class="additionalData">
+                <input type="text" placeholder="Profession">
+                <input type="text" placeholder="Branza ;p">
+            </div>
+            <div class="save">
+                <div class="btn btnSave" id="pickerSave">
+                    <a href="#">SAVE</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var myPicker = new jscolor.color(document.getElementById('myField1'), {pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black'})
+    myPicker.fromString('F4F2F1')  // now you can access API via 'myPicker' variable
+
+</script>
+
+<script type="text/javascript">
+    var pickerYourLogin = new jscolor.color(document.getElementById('pickerYourLogin'), {pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black',pickerPosition:'right'})
+//    pickerYourLogin.fromString('FFF')
+//    pickerSave.style.backgroundColor = '#'+this.color";
+</script>
+
+<script>
+//    $(document).on('click', '#myPickerId', function () {
+//        var obj = $(this)[0];
+//        if (!obj.hasPicker) {
+//            var picker = new jscolor.color(obj, {});  //
+//            obj.hasPicker = true;
+//            picker.showPicker();
+//        }
+//    });
+</script>
+
+<script>
+//(function () {
+//    var footer = document.getElementById('footer'),
+//    inputColor = footer.getElementsByTagName('input')[0];
+//
+//    inputColor.onchange = function () {
+//    footer.style.backgroundColor = '#' + this.color;
+//    };
+//    })();
+</script>
