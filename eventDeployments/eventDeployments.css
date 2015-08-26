@@ -4,6 +4,7 @@ p,
 a{
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 .headerUp{
     width: 100%;
@@ -11,12 +12,108 @@ a{
     background-color: rgb(51,51,51);
     font-size: 2.4rem;
     color:#fff;
+    padding-top: 5px;
 }
-.headerDown{
-    width:100%;
-    height:50px;
-    background-color: rgb(77,77,77);
+.event{
+    left:30px;
+}
+.add{
+    text-align: right;
+    right: 20px;
+}
+@media (max-width: 471px){
+    .headerUp{
+        height: 80px;
+    }
+}
+.table-responsive> table>thead {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(77, 77, 77);
     font-size: 2.4rem;
-    color: rgb(254,100,4);
-    margin:0;
+    color: rgb(254, 100, 4);
+    margin: 0;
+    padding-top: 5px;
+    text-align: center;
+    border-bottom: none;
 }
+.table-responsive> table>tbody{
+    padding-top: 5px;
+}
+.table-responsive> table>thead>tr>th {
+    text-align: center;
+    border:none;
+}
+.table-responsive> table>tbody>tr {
+    box-sizing: border-box;
+}
+.id, .eventName, .action{
+    padding-left:0;
+}
+.btnAdd, .myFa{
+    display: inline-block;
+}
+.myFa{
+    color:rgb(254,100,4);
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 2.0rem;
+}
+.btnAdd>p{
+    color:#fff;
+    font-size: 1.8rem;
+    display: inline-block;
+}
+.table{
+    text-align: center;
+    font-size: 1.8rem;
+}
+.table-responsive{
+    border:none;
+}
+.table > tbody > tr > td{
+    border:none;
+    vertical-align: middle;
+}
+.table-responsive> table>tbody>tr:hover  .btnEdit {
+    background-color: rgb(77, 77, 77);
+    color: #fff;
+
+}
+
+.table-responsive> table>tbody>tr:hover  .btnList{
+    background-color: rgb(254,100,4);
+    color:#fff;
+}
+.table-responsive> table>tbody>tr:hover  .btnDelete{
+    background-color: rgb(51,51,51);
+    color:#fff;
+}
+.table-responsive> table>tbody>tr:hover{
+    box-sizing: border-box;
+    border-top: solid 1px rgb(254,100,4);
+    border-bottom: solid 1px rgb(254,100,4);
+
+}
+.theme{
+    background-color: rgb(204,204,204);
+    color:#fff;
+}
+.table-responsive .btn{
+    border-radius:0;
+    width: 70px;
+}
+.btn:hover{
+    text-decoration: none;
+
+}
+/*.btnList{*/
+    /*background-color: rgb(254,100,4);*/
+/*}*/
+/*.btnEdit{*/
+    /*background-color: rgb(204,204,204);*/
+/*}*/
+/*.btnDelete{*/
+    /*background-color: rgb(51,51,51);*/
+    /*color:#fff;*/
+/*}*/
