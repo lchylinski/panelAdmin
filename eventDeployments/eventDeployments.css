@@ -78,7 +78,9 @@ a{
 .table-responsive> table>tbody>tr:hover  .btnEdit {
     background-color: rgb(77, 77, 77);
     color: #fff;
+
 }
+
 .table-responsive> table>tbody>tr:hover  .btnList{
     background-color: rgb(254,100,4);
     color:#fff;
