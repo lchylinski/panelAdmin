@@ -1,0 +1,111 @@
+html,body{
+    margin: 0;
+    padding:0;
+}
+.headerUp{
+    height:50px;
+    background-color: rgb(51,51,51);
+    font-size: 2.4rem;
+    color:#fff;
+}
+.headerDown{
+    height: 50px;
+    background-color: rgb(77,77,77);
+    font-size: 2.4rem;
+    color: rgb(254,100,4);
+}
+.infoEvent{
+    left:40px;
+    margin-top: 5px;
+}
+.number, .eventName{
+    margin-top: 5px;
+}
+/*.bottoms {*/
+    /*text-align: right;*/
+/*}*/
+
+.bottoms> .btnList,.bottoms> .btnDelete, .bottoms> .btnEdit{
+    width: 70px;
+    height: 50px;
+    border-radius:0;
+    font-size: 1.8rem;
+    float: right;
+}
+.bottoms> .btnList> p,.bottoms> .btnDelete> p, .bottoms> .btnEdit> p{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.btnList{
+    background-color: rgb(254,100,4);
+}
+.btnEdit{
+    background-color: rgb(204,204,204);
+}
+.btnDelete{
+    background-color: rgb(51,51,51);
+}
+.btnEdit:hover, .btnDelete:hover, .btnList:hover{
+    color:#fff;
+}
+.number, .eventName{
+    left:40px;
+}
+.table{
+    margin: 70px auto;
+    text-align: center;
+    width: 55%;
+    font-size: 1.8rem;
+}
+
+@media (max-width:992px){
+    .table{
+        width: 70%;
+    }
+}
+@media (max-width:768px){
+    .table{
+        width: 80%;
+    }
+    .table-responsive{
+        border:none;
+    }
+}
+@media (max-width:480px){
+    .table{
+        width: 90%;
+    }
+}
+.table > tbody > tr > td.category{
+    border-bottom: solid 1px rgb(254,100,4);
+    border-top: none;
+    text-align: right;
+    padding-right: 20px;
+}
+.table > tbody > tr > td.name{
+    border: solid 1px rgb(254,100,4);
+    border-top: solid 1px rgb(254,100,4);
+    text-align: left;
+    padding-left: 40px;
+}
+.theme{
+    background-color: rgb(204,204,204);
+    color:#fff;
+}
+.quest{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.btnQuest{
+    font-size: 1.8rem;
+    background-color: rgb(254,100,4);
+    border-radius:0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    color:#fff;
+}
+.btn:hover{
+    color:#fff;
+}
