@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head >
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link id="loadCss" rel="stylesheet" href="../eventDeployments/eventDeployments.css" type="text/css" >
     <meta charset="UTF-8">
-    <title></title>
+    <title>ED</title>
 </head>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-<link rel="stylesheet" href="eventDeployments.css" type="text/css">
 <body>
 
 <div class="wrapper">
-    <div class="header">
-        <div class="headerUp">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 event">Event deployments</div>
+        <div class="headerUp " id="loadHeader">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 event">
+                Event deployments
+            </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 add">
                 <div class="btn btnAdd">
                     <i class="fa fa-plus myFa"></i>
@@ -29,10 +27,10 @@
                 </div>
             </div>
         </div>
-        <div class="table-responsive">
+        <div class="table-responsive myTable" id="loadContent">
             <table class="table">
                 <thead>
-                <tr>
+                <tr class="subHeaderUp ">
                     <th>ID</th>
                     <th>Event name</th>
                     <th>Actions</th>
@@ -106,10 +104,8 @@
 
                 </tbody>
             </table>
-
-    </table>
+        </div>
 </div>
-
 
 </body>
 </html>

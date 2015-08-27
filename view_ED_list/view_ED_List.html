@@ -59,18 +59,22 @@
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse ">
-                <ul class="nav navbar-nav side-nav navBorderLine">
+                <ul class="nav  side-nav navBorderLine">
                     <li class="active">
-                        <a href="view_ED_List.html"><i class="fa fa-fw fa-dashboard"></i> Event deployments</a>
+                        <a href="view_ED_List.html"><i class="fa fa-fw fa-dashboard"></i> Main</a>
                     </li>
+
                     <li>
-                        <a href="event_info.html"><i class="fa fa-fw fa-bar-chart-o"></i> Event info</a>
+                        <a href="../eventInfo/eventInfo.html"><i class="fa fa-fw fa-bar-chart-o"></i> Event info</a>
                     </li>
                     <li>
                         <a href="quests.html"><i class="fa fa-fw fa-table"></i> Quests</a>
                     </li>
                     <li>
                         <a href="../view_phone/phonePart.html"><i class="fa fa-fw fa-edit"></i> Customize your app</a>
+                    </li>
+                    <li>
+                        <a href="../eventDeployments/eventDeployments.html" id="defHeading"><i class="fa fa-fw fa-dashboard"></i> Event deployments</a>
                     </li>
                     <!--<li>-->
                         <!--<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Event deployments <i class="fa fa-fw fa-caret-down"></i></a>-->
@@ -84,40 +88,43 @@
             </div>
             <!-- /.navbar-collapse -->
         </nav>
-        <div class="headingLoad">
-                <!-- Page Heading -->
-                <div class="row heading_row navbar-fixed-top">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                        <h1 class="page-header myHeader">
-                            Event deployments
-                        </h1>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 heading_right">
-                        <i class="fa fa-plus myFa"></i>
-                        <h1 class=" myHeader"><small>Add new event</small></h1>
-                    </div>
-                </div>
-                <!-- /.row -->
-                <div class="row subHeading_row navbar-fixed-top">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                        <h1 class="page-header myHeader">
-                            ID
-                        </h1>
-                    </div>
-                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                        <h1 class=" myHeader">Event Name</h1>
-                    </div>
-                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                        <h1 class=" myHeader">Actions</h1>
-                    </div>
-                </div>
-                <!-- /.row -->
-                <!--end PageHeading-->
-        </div>
+
+
 
         <div class="container myContent">
 
-            <div class="pageLoad" id="pageLoad"></div>
+            <div class="pageLoad" id="pageLoad">
+                <div class="headingLoad" id="loadHeader">
+                    <!-- Page Heading -->
+                    <div class="row heading_row navbar-fixed-top">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <h1 class="page-header myHeader">
+                                Event deployments
+                            </h1>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 heading_right">
+                            <i class="fa fa-plus myFa"></i>
+                            <h1 class=" myHeader"><small>Add new event</small></h1>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <div class="row subHeading_row navbar-fixed-top">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <h1 class="page-header myHeader">
+                                ID
+                            </h1>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                            <h1 class=" myHeader">Event Name</h1>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                            <h1 class=" myHeader">Actions</h1>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <!--end PageHeading-->
+                </div>
+            </div>
 
         </div>
 
@@ -135,10 +142,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
         <script>
+            $( document ).ready(function() {
+                var href = $("#defHeading").attr('href')+' #loadHeader'+ ', #loadCss'+', #loadContent';
+                $("#pageLoad").load(href);
+            });
+        </script>
+
+        <script>
             // Catch the click on your a tag
             $("a").click(function(){
                 // Load the content of the page referenced in the a-tags href
-                $("#pageLoad").load($(this).attr("href"));
+                var href = $(this).attr('href')+' #loadHeader,' + ' #loadCss,' + ' #loadContent,' + ' #loadScript';
+                $("#pageLoad").load(href);
+
                 // Prevent browsers default behavior to follow the link when clicked
                 return false;
             });

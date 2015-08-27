@@ -18,6 +18,11 @@ input, .btn:focus, .btn:active:focus, .btn.active:focus{
     width: 100%;
     background-color: rgb(36,36,36);
 }
+.headerUp{
+
+    margin-top: 154px;
+
+}
 /*.row{*/
     /*margin: 0;*/
     /*padding: 0;*/
@@ -33,7 +38,9 @@ input, .btn:focus, .btn:active:focus, .btn.active:focus{
 }
 .headerDown{
     text-align: center;
-    margin: 12px 0;
+    padding: 12px 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 .userProfile{
     font-size: 17px;
@@ -111,3 +118,4 @@ input:focus::-webkit-input-placeholder {
 .color{
     pickerFaceColor:'transparent',pickerFace:3,pickerBorder:0,pickerInsetColor:'black'
 }
+
