@@ -152,7 +152,8 @@
             // Catch the click on your a tag
             $("a").click(function(){
                 // Load the content of the page referenced in the a-tags href
-                var href = $(this).attr('href')+' #loadHeader,' + ' #loadCss,' + ' #loadContent,' + ' #loadScript';
+                var href = $(this).attr('href');
+//                var href = $(this).attr('href')+' #loadHeader,' + ' #loadCss,' + ' #loadContent,' + ' #loadScript';
                 $("#pageLoad").load(href);
 
                 // Prevent browsers default behavior to follow the link when clicked
