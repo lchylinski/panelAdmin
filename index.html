@@ -23,11 +23,13 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-    <link id="loadCss" rel="stylesheet" href="eventDeployments/eventDeployments.css" type="text/css" >
 
 
-    <!-- myCustom CSS -->
+
+    <!-- myCustom CSS styles -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="eventDeployments/eventDeployments.css" type="text/css" >
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,12 +41,6 @@
     <!-- ColorPicker -->
     <link href="colorPicker/css/bootstrap-colorpicker.css" rel="stylesheet">
 
-        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
-        <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
-        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
-        <!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
-        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
-        <!-- -->
 </head>
 
 <body>
@@ -100,7 +96,7 @@
 
 
 
-        <div class="container myContent zoomIn">
+        <div class="container myContent">
             <div class="pageLoad" id="pageLoad">
                     <div class="headerUp " id="loadHeader">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 event">
@@ -123,71 +119,16 @@
                             </tr>
                             </thead>
 
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>InfoShare 2015</td>
-                                <td>
-                                    <div class="btn btnList"><p>List</p></div>
-                                    <div class="btn btnEdit"><p>Edit</p></div>
-                                    <div class="btn btnDelete"><p>Delete</p></div>
-                                </td>
-                            </tr>
-                            <tr class="theme">
-                                <td>2</td>
-                                <td>Scalac</td>
-                                <td>
-                                    <div class="btn btnList"><p>List</p></div>
-                                    <div class="btn btnEdit"><p>Edit</p></div>
-                                    <div class="btn btnDelete"><p>Delete</p></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Bolek</td>
-                                <td>
-                                    <div class="btn btnList"><p>List</p></div>
-                                    <div class="btn btnEdit"><p>Edit</p></div>
-                                    <div class="btn btnDelete"><p>Delete</p></div>
-                                </td>
-                            </tr>
-                            <tr class="theme">
-                                <td>4</td>
-                                <td>Bolek2</td>
-                                <td>
-                                    <div class="btn btnList"><p>List</p></div>
-                                    <div class="btn btnEdit"><p>Edit</p></div>
-                                    <div class="btn btnDelete"><p>Delete</p></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Codepote</td>
-                                <td>
-                                    <div class="btn btnList"><p>List</p></div>
-                                    <div class="btn btnEdit"><p>Edit</p></div>
-                                    <div class="btn btnDelete"><p>Delete</p></div>
-                                </td>
-                            </tr>
-                            <tr class="theme">
-                                <td>6</td>
-                                <td>codepote2</td>
-                                <td>
-                                    <div class="btn btnList"><p>List</p></div>
-                                    <div class="btn btnEdit"><p>Edit</p></div>
-                                    <div class="btn btnDelete"><p>Delete</p></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>scalaC</td>
-                                <td>
-                                    <div class="btn btnList"><p>List</p></div>
-                                    <div class="btn btnEdit"><p>Edit</p></div>
-                                    <div class="btn btnDelete"><p>Delete</p></div>
-                                </td>
-                            </tr>
-
+                            <tbody id="eventsData">
+                            <!--<tr class="theme" href="eventInfo/eventInfo.html">-->
+                                <!--<td>1</td>-->
+                                <!--<td>NaSztywno</td>-->
+                                <!--<td>-->
+                                    <!--<div class="btn btnList"><p>List</p></div>-->
+                                    <!--<div class="btn btnEdit"><p>Edit</p></div>-->
+                                    <!--<div class="btn btnDelete"><p>Delete</p></div>-->
+                                <!--</td>-->
+                            <!--</tr>-->
                             </tbody>
                         </table>
                     </div>
@@ -207,18 +148,36 @@
     <!--<script src="js/plugins/morris/morris.min.js"></script>-->
     <!--<script src="js/plugins/morris/morris-data.js"></script>-->
 
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+    <!-- ColorPicker -->
+    <script src="colorPicker/js/bootstrap-colorpicker.min.js"></script>
+
+        <!--myScripts-->
         <script>
-//            $( document ).ready(function() {
-//                var href = $("#defHeading").attr('href')+' #loadHeader'+ ', #loadCss'+', #loadContent';
-//                $("#pageLoad").load(href);
-//            });
+            // Load table data from event.json
+            $(document).ready(function(){
+                $.getJSON("js/events.json", function(result){
+                    $.each(result, function(i, dane){
+                        var theme = '';
+                        if(dane.id % 2 == 0 ){
+                            theme = 'theme';
+                        }
+                        $('#eventsData').append("<tr class=" + theme +"><td>" + dane.id + "</td><td>" + dane.name + "</td><td>"
+                                + "<div class='btn btnList'><p>Event Info</p></div>"
+                               //+ "<div class='btn btnEdit'><p>Edit</p></div>"
+                                + "<div class='btn btnDelete'><p>Delete</p></div>"
+                                + "</td></tr>");
+                    });
+                });
+            });
         </script>
 
         <script>
             // Catch the click on your a tag
             $("a").click(function(){
+               // prevent reloading data from index.html -> only go to link index.html
                 if( ($(this).attr('id') == 'indexHref_a') || ($(this).attr('id') == 'indexHref_logo') ) {
                     console.log('a == indexhref');
                 }else{
@@ -231,9 +190,13 @@
                 }
             });
         </script>
+        <script>
+            // Catch the click on your a tag
+            $("a").click(function() {
+                    };
+        </script>
 
-    <!-- ColorPicker -->
-    <script src="colorPicker/js/bootstrap-colorpicker.min.js"></script>
+
 
 
 </body>

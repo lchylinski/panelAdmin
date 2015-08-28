@@ -36,7 +36,7 @@
             </tr>
             </thead>
             <tbody id="eventsData">
-                <!--<tr>-->
+            <!--<tr class="theme">-->
                     <!--<td>1</td>-->
                     <!--<td>InfoShare 2015</td>-->
                     <!--<td>-->
@@ -61,8 +61,11 @@
     $(document).ready(function(){
         $.getJSON("../js/events.json", function(result){
             $.each(result, function(i, dane){
-
-                $('#eventsData').append("<tr><td>" + dane.id + "</td><td>" + dane.name + "</td><td>"
+                var theme = '';
+                if(dane.id % 2 == 0 ){
+                    theme = 'theme';
+                }
+                $('#eventsData').append("<tr class=" + theme +"><td>" + dane.id + "</td><td>" + dane.name + "</td><td>"
                     + "<div class='btn btnList'><p>List</p></div>"
                     + "<div class='btn btnEdit'><p>Edit</p></div>"
                     + "<div class='btn btnDelete'><p>Delete</p></div>"
