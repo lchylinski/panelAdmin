@@ -36,6 +36,15 @@
             </tr>
             </thead>
             <tbody>
+                        <tr>
+                            <td id="eventID">1</td>
+                            <td id="eventName">InfoShare 2015</td>
+                            <td>
+                                <div class="btn btnList"><p>List</p></div>
+                                <div class="btn btnEdit"><p>Edit</p></div>
+                                <div class="btn btnDelete"><p>Delete</p></div>
+                            </td>
+                        </tr>
             <tr>
                 <td>1</td>
                 <td>InfoShare 2015</td>
@@ -104,4 +113,23 @@
     </div>
 </div>
 </body>
+
+<script>
+    $(document).ready(function(){
+        $.getJSON("js/events.json", function(result){
+            $.each(result, function(i, name, id){
+//                $("eventID").append(id);
+//                $("eventName").append(name);
+
+            $('#eventsData').append("<tr><td>" + id + "</td><td>" + name + "</td><td>"
+                + "div class='btn btnList'><p>List</p></div>"
+                + "<div class='btn btnEdit'><p>Edit</p></div>"
+                + "<div class='btn btnDelete'><p>Delete</p></div>"
+                + "</td></tr>");
+            });
+        });
+    });
+</script>
+
 </html>
+
