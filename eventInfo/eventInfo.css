@@ -38,6 +38,10 @@ html,body{
 .number, .eventName{
     margin-top: 5px;
 }
+.bottoms{
+    margin:0;
+    padding: 0;
+}
 .bottoms> .btnList,.bottoms> .btnDelete, .bottoms> .btnEdit{
     width: 70px;
     height: 50px;
