@@ -1,10 +1,10 @@
-{"event":[
-  {"ID":"1", "name":"InfoShare 2015"},
-  {"ID":"2", "name":"ScalaC"},
-  {"ID":"3", "name":"Bolek"},
-  {"ID":"4", "name":"Bolek2"},
-  {"ID":"5", "name":"Codepot"},
-  {"ID":"6", "name":"CODEPOT2"},
-  {"ID":"7", "name":"TweetUp"},
-  {"ID":"8", "name":"scala"}
-]}
+[
+  {"id":"1", "name":"InfoShare 2015"},
+  {"id":"2", "name":"ScalaC"},
+  {"id":"3", "name":"Bolek"},
+  {"id":"4", "name":"Bolek2"},
+  {"id":"5", "name":"Codepot"},
+  {"id":"6", "name":"CODEPOT2"},
+  {"id":"7", "name":"TweetUp"},
+  {"id":"8", "name":"scala"}
+]

@@ -35,101 +35,44 @@
                 <th>Actions</th>
             </tr>
             </thead>
-            <tbody>
-                        <tr>
-                            <td id="eventID">1</td>
-                            <td id="eventName">InfoShare 2015</td>
-                            <td>
-                                <div class="btn btnList"><p>List</p></div>
-                                <div class="btn btnEdit"><p>Edit</p></div>
-                                <div class="btn btnDelete"><p>Delete</p></div>
-                            </td>
-                        </tr>
-            <tr>
-                <td>1</td>
-                <td>InfoShare 2015</td>
-                <td>
-                    <div class="btn btnList"><p>List</p></div>
-                    <div class="btn btnEdit"><p>Edit</p></div>
-                    <div class="btn btnDelete"><p>Delete</p></div>
-                </td>
-            </tr>
-            <tr class="theme">
-                <td>2</td>
-                <td>Scalac</td>
-                <td>
-                    <div class="btn btnList"><p>List</p></div>
-                    <div class="btn btnEdit"><p>Edit</p></div>
-                    <div class="btn btnDelete"><p>Delete</p></div>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Bolek</td>
-                <td>
-                    <div class="btn btnList"><p>List</p></div>
-                    <div class="btn btnEdit"><p>Edit</p></div>
-                    <div class="btn btnDelete"><p>Delete</p></div>
-                </td>
-            </tr>
-            <tr class="theme">
-                <td>4</td>
-                <td>Bolek2</td>
-                <td>
-                    <div class="btn btnList"><p>List</p></div>
-                    <div class="btn btnEdit"><p>Edit</p></div>
-                    <div class="btn btnDelete"><p>Delete</p></div>
-                </td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Codepote</td>
-                <td>
-                    <div class="btn btnList"><p>List</p></div>
-                    <div class="btn btnEdit"><p>Edit</p></div>
-                    <div class="btn btnDelete"><p>Delete</p></div>
-                </td>
-            </tr>
-            <tr class="theme">
-                <td>6</td>
-                <td>codepote2</td>
-                <td>
-                    <div class="btn btnList"><p>List</p></div>
-                    <div class="btn btnEdit"><p>Edit</p></div>
-                    <div class="btn btnDelete"><p>Delete</p></div>
-                </td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>scalaC</td>
-                <td>
-                    <div class="btn btnList"><p>List</p></div>
-                    <div class="btn btnEdit"><p>Edit</p></div>
-                    <div class="btn btnDelete"><p>Delete</p></div>
-                </td>
-            </tr>
+            <tbody id="eventsData">
+                <!--<tr>-->
+                    <!--<td>1</td>-->
+                    <!--<td>InfoShare 2015</td>-->
+                    <!--<td>-->
+                        <!--<div class="btn btnList"><p>List</p></div>-->
+                        <!--<div class="btn btnEdit"><p>Edit</p></div>-->
+                        <!--<div class="btn btnDelete"><p>Delete</p></div>-->
+                    <!--</td>-->
+                <!--</tr>-->
             </tbody>
         </table>
     </div>
 </div>
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="../js/jquery.js"></script>
+
+<script src="../js/bootstrap.min.js"></script>
+
 <script>
     $(document).ready(function(){
-        $.getJSON("js/events.json", function(result){
-            $.each(result, function(i, name, id){
-//                $("eventID").append(id);
-//                $("eventName").append(name);
+        $.getJSON("../js/events.json", function(result){
+            $.each(result, function(i, dane){
 
-            $('#eventsData').append("<tr><td>" + id + "</td><td>" + name + "</td><td>"
-                + "div class='btn btnList'><p>List</p></div>"
-                + "<div class='btn btnEdit'><p>Edit</p></div>"
-                + "<div class='btn btnDelete'><p>Delete</p></div>"
-                + "</td></tr>");
+                $('#eventsData').append("<tr><td>" + dane.id + "</td><td>" + dane.name + "</td><td>"
+                    + "<div class='btn btnList'><p>List</p></div>"
+                    + "<div class='btn btnEdit'><p>Edit</p></div>"
+                    + "<div class='btn btnDelete'><p>Delete</p></div>"
+                    + "</td></tr>");
             });
         });
     });
 </script>
+
+
 
 </html>
 
