@@ -81,10 +81,10 @@ function initialize( next ) {
 	if ( xbeta === "pre" ) {
 		die( "Cannot release a 'pre' version!" );
 	}
-	if ( !(fs.existsSync || path.existsSync)( "package.json" ) ) {
-		die( "No package.json in this directory" );
+	if ( !(fs.existsSync || path.existsSync)( "quests.json" ) ) {
+		die( "No quests.json in this directory" );
 	}
-	pkg = JSON.parse( fs.readFileSync( "package.json" ) );
+	pkg = JSON.parse( fs.readFileSync( "quests.json" ) );
 
 	console.log( "Current version is " + pkg.version + "; generating release " + releaseVersion );
 	version = pkg.version.match( rversion );
@@ -180,7 +180,7 @@ function uploadToCDN( next ) {
 		});
 	});
 	cmds.push( next );
-	
+
 	steps.apply( this, cmds );
 }
 
@@ -201,10 +201,10 @@ function steps() {
 }
 
 function updatePackageVersion( ver ) {
-	console.log( "Updating package.json version to " + ver );
+	console.log( "Updating quests.json version to " + ver );
 	pkg.version = ver;
 	if ( !debug ) {
-		fs.writeFileSync( "package.json", JSON.stringify( pkg, null, "\t" ) + "\n" );
+		fs.writeFileSync( "quests.json", JSON.stringify( pkg, null, "\t" ) + "\n" );
 	}
 }
 
@@ -225,7 +225,7 @@ function exec( cmd, args, fn, skip ) {
 		fn( "", "", "" );
 	} else {
 		console.log( cmd + " " + args.join(" ") );
-		child.execFile( cmd, args, { env: process.env }, 
+		child.execFile( cmd, args, { env: process.env },
 			function( err, stdout, stderr ) {
 				if ( err ) {
 					die( stderr || stdout || err );

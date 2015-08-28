@@ -16,7 +16,7 @@ module.exports = function( grunt ) {
 		};
 
 	grunt.initConfig({
-		pkg: grunt.file.readJSON("package.json"),
+		pkg: grunt.file.readJSON("quests.json"),
 		dst: readOptionalJSON("dist/.destination.json"),
 		compare_size: {
 			files: distpaths
