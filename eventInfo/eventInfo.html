@@ -32,43 +32,43 @@
         </div>
     </div>
     <div class="table-responsive">
-        <table class="table">
-            <tbody>
+        <table class="table" >
+            <tbody id="eventInfoTable">
             <tr>
                 <td class="category">Event deployment id: </td>
-                <td class="name">1</td>
+                <td class="name" id="eventId"></td>
             </tr>
             <tr>
                 <td class="category">Name: </td>
-                <td class="name theme">InfoShare 2015</td>
+                <td class="name theme" id="eventName"></td>
             </tr>
             <tr>
                 <td class="category">Subtitle: </td>
-                <td class="name">Tech & new media festival</td>
+                <td class="name" id="subtitle"></td>
             </tr>
             <tr>
                 <td class="category">Promo: </td>
-                <td class="name theme">Powered by Huntly app</td>
+                <td class="name theme" id="promo"></td>
             </tr>
             <tr>
                 <td class="category">start date: </td>
-                <td class="name">2015-06-11</td>
+                <td class="name" id="startDate"></td>
             </tr>
             <tr>
                 <td class="category">End date: </td>
-                <td class="name theme">2015-06-12</td>
+                <td class="name theme" id="endDate"></td>
             </tr>
             <tr>
                 <td class="category">Location: </td>
-                <td class="name">Gdansk, Poland</td>
+                <td class="name" id="location"></td>
             </tr>
             <tr>
                 <td class="category">Background color: </td>
-                <td class="name theme">#000000</td>
+                <td class="name theme" id="background"></td>
             </tr>
             <tr>
                 <td class="category">Theme: </td>
-                <td class="name">RedTheme</td>
+                <td class="name" id="eventTheme"></td>
             </tr>
             <tr>
                 <td></td>
@@ -81,6 +81,35 @@
     </div>
 </div>
 
+<script>
+    $(document).ready(function(){
+        $.getJSON("js/events.json", function(result){
+            $.each(result, function(i, eventList){
+//                var theme = '';
+//                if(quest.id % 2 == 0 ){
+//                    theme = 'theme';
+//                }
+
+
+                $('#eventId').append(eventList[0].id);
+                $('#eventName').append(eventList[0].name);
+                $('#subtitle').append(eventList[0].subtitle);
+                $('#promo').append(eventList[0].promo);
+                $('#startDate').append(eventList[0].startDate);
+                $('#endDate').append(eventList[0].endDate);
+                $('#location').append(eventList[0].location);
+                $('#background').append(eventList[0].bgColor);
+                $('#eventTheme').append(eventList[0].theme);
+
+//                        "<tr class="+theme+"><td>" + quest.id + "</td><td>" + quest.eventId + "</td><td>"
+//                        + quest.name + "</td><td>" + quest.kind + "</td><td>"+quest.reward + "</td><td><div class='btn btnList'><p>List</p></div>"
+//                        + "<div class='btn btnEdit'><p>Edit</p></div>"
+//                        + "<div class='btn btnDelete'><p>Delete</p></div>"
+//                        + "</td></tr>");
+            });
+        });
+    });
+</script>
 
 
 </body>

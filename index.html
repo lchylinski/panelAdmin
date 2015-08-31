@@ -160,16 +160,20 @@
             // Load table data from event.json
             $(document).ready(function(){
                 $.getJSON("js/events.json", function(result){
+
                     $.each(result, function(i, dane){
-                        var theme = '';
-                        if(dane.id % 2 == 0 ){
-                            theme = 'theme';
+
+                        for(var j=0;j<dane.length;j++) {
+                            var theme = '';
+                            if(dane[j].id % 2 == 0 ){
+                                theme = 'theme';
+                            }
+                            $('#eventsData').append("<tr class=" + theme + "><td>" + dane[j].id + "</td><td>" + dane[j].name + "</td><td>"
+                                    + "<div class='btn btnList' id= " + dane[j].id + " ><p>Event Info</p></div>"
+                                        //+ "<div class='btn btnEdit'><p>Edit</p></div>"
+                                    + "<div class='btn btnDelete'><p>Delete</p></div>"
+                                    + "</td></tr>");
                         }
-                        $('#eventsData').append("<tr class=" + theme +"><td>" + dane.id + "</td><td>" + dane.name + "</td><td>"
-                                + "<div class='btn btnList' id= " + dane.id + " ><p>Event Info</p></div>"
-                               //+ "<div class='btn btnEdit'><p>Edit</p></div>"
-                                + "<div class='btn btnDelete'><p>Delete</p></div>"
-                                + "</td></tr>");
                     });
                 });
             });
@@ -193,7 +197,7 @@
         </script>
         <script>
             // Catch the click on your <button> tag
-            $(".btnList").click(function() {
+            $(".event").click('click', function( ){
 //                var href = $(this).attr('id');
 //                $("#pageLoad").load(href);
 //                console.log('id Buttona:'+ href);

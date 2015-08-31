@@ -1,27 +1,112 @@
-[
-  {"id":"1", "name":"InfoShare 2015", "info":{
-      "subtitle":"Tech & new media",
-      "promo":"Powered by Huntly",
-      "startDate":"",
-      "endDate":"",
-      "location":"",
-      "bgColor":"",
-      "theme":"RedTheme"
-    }},
-  {"id":"2", "name":"ScalaC", "info":{
-    "subtitle":"Tech Scala",
-    "promo":"Scalac Power",
-    "startDate":"",
-    "endDate":"",
-    "location":"",
-    "bgColor":"",
-    "theme":"RedTheme"
-  }},
-  {"id":"3", "name":"Bolek"},
-  {"id":"4", "name":"Bolek2"},
-  {"id":"5", "name":"Codepot"},
-  {"id":"6", "name":"CODEPOT2"},
-  {"id":"7", "name":"TweetUp"},
-  {"id":"8", "name":"scala"},
-  {"id":"9", "name":"ShineBright"}
-]
+{
+  "eventList": [
+    {
+      "id": "1",
+      "name": "InfoShare 2015",
+      "subtitle": "Tech & new media",
+      "promo": "Powered by Huntly",
+      "startDate": "",
+      "endDate": "",
+      "location": "",
+      "bgColor": "",
+      "theme": "RedTheme"
+
+    },
+    {
+      "id": "2",
+      "name": "ScalaC",
+      "subtitle": "Tech Scala",
+      "promo": "Scalac Power",
+      "startDate": "",
+      "endDate": "",
+      "location": "",
+      "bgColor": "",
+      "theme": "RedTheme"
+    },
+    {
+      "id": "3",
+      "name": "Bolek",
+      "subtitle": "Tech Scala",
+      "promo": "Scalac Power",
+      "startDate": "",
+      "endDate": "",
+      "location": "",
+      "bgColor": "",
+      "theme": "RedTheme"
+
+    },
+    {
+      "id": "4",
+      "name": "Bolek2",
+      "subtitle": "Tech Scala",
+      "promo": "Scalac Power",
+      "startDate": "",
+      "endDate": "",
+      "location": "",
+      "bgColor": "",
+      "theme": "RedTheme"
+
+    },
+    {
+      "id": "5",
+      "name": "Codepot",
+      "subtitle": "Tech Scala",
+      "promo": "Scalac Power",
+      "startDate": "",
+      "endDate": "",
+      "location": "",
+      "bgColor": "",
+      "theme": "RedTheme"
+
+    },
+    {
+      "id": "6",
+      "name": "CODEPOT2",
+      "info": {
+        "subtitle": "Tech Scala",
+        "promo": "Scalac Power",
+        "startDate": "",
+        "endDate": "",
+        "location": "",
+        "bgColor": "",
+        "theme": "RedTheme"
+      }
+    },
+    {
+      "id": "7",
+      "name": "TweetUp",
+      "subtitle": "Tech Scala",
+      "promo": "Scalac Power",
+      "startDate": "",
+      "endDate": "",
+      "location": "",
+      "bgColor": "",
+      "theme": "RedTheme"
+
+    },
+    {
+      "id": "8",
+      "name": "scala",
+      "subtitle": "Tech Scala",
+      "promo": "Scalac Power",
+      "startDate": "",
+      "endDate": "",
+      "location": "",
+      "bgColor": "",
+      "theme": "RedTheme"
+
+    },
+    {
+      "id": "9",
+      "name": "ShineBright",
+      "subtitle": "Tech Scala",
+      "promo": "Scalac Power",
+      "startDate": "",
+      "endDate": "",
+      "location": "",
+      "bgColor": "",
+      "theme": "RedTheme"
+      }
+
+  ]
+}
