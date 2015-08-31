@@ -196,18 +196,60 @@
         </script>
 
         <script>
-            // Catch the click on your <button> tag
-            $('#eventsData').on('click', '.btnList' ,function() {
-                    var currentId = $(this).attr('id');
-                    console.log('id Buttona:'+ currentId);
-
-                    var href = 'eventInfo/eventInfo.html';
-                    $("#pageLoad").load(href);
-
-                    // Prevent browsers default behavior to follow the link when clicked
-                    return false;
-                });
+//            // Catch the click on your <button> tag
+//            $('#eventsData').on('click', '.btnList' ,function() {
+//                    var currentId = $(this).attr('id');
+//                    console.log('id Buttona:'+ currentId);
+//
+//                    var href = 'eventInfo/eventInfo.html';
+//                    $("#pageLoad").load(href);
+//
+//                    // Prevent browsers default behavior to follow the link when clicked
+//                    return false;
+//                });
         </script>
+
+    <script>
+        // THIS IS WHERE THE MAGIC HAPPENS
+        $(function() {
+            $('#eventsData').on('click', '.btnList' ,function(e) {
+//                $("#loading").show();
+                currentID = $(this).attr("id");
+
+//                loadContent(currentID);
+                var hrefEventInfo = 'eventInfo/eventInfo.html';
+                $("#pageLoad").load(hrefEventInfo);
+
+                // HISTORY.PUSHSTATE
+                history.pushState('', 'New URL: '+currentID, currentID);
+                e.preventDefault();
+            });
+
+            // THIS EVENT MAKES SURE THAT THE BACK/FORWARD BUTTONS WORK AS WELL
+            window.onpopstate = function(event) {
+//                $("#loading").show();
+                console.log("pathname: "+location.pathname);
+//                loadContent(location.pathname);
+            };
+        });
+
+        function loadContent(url){
+//            // USES JQUERY TO LOAD THE CONTENT
+//            $.getJSON("js/events.json", function(json) {
+//                // THIS LOOP PUTS ALL THE CONTENT INTO THE RIGHT PLACES
+//                $.each(json, function(key, value){
+//                    $(key).html(value);
+//                });
+////                $("#loading").hide();
+//            });
+
+//            Mozna to uzyc do stylowania navigacji po lewej
+//            // THESE TWO LINES JUST MAKE SURE THAT THE NAV BAR REFLECTS THE CURRENT URL
+//            $('li').removeClass('current');
+//            $('a[currentID="'+url+'"]').parent().addClass('current');
+
+        }
+    </script>
 
 </body>
 

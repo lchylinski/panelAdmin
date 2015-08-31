@@ -89,17 +89,21 @@
 //                if(quest.id % 2 == 0 ){
 //                    theme = 'theme';
 //                }
+                console.log(location.pathname);
+                    var presentID = location.pathname.slice(-1);
+                    parseInt(presentID);
+                    presentID -= 1 ;
+                console.log(presentID);
 
-
-                $('#eventId').append(eventList[0].id);
-                $('#eventName').append(eventList[0].name);
-                $('#subtitle').append(eventList[0].subtitle);
-                $('#promo').append(eventList[0].promo);
-                $('#startDate').append(eventList[0].startDate);
-                $('#endDate').append(eventList[0].endDate);
-                $('#location').append(eventList[0].location);
-                $('#background').append(eventList[0].bgColor);
-                $('#eventTheme').append(eventList[0].theme);
+                $('#eventId').append(eventList[presentID].id);
+                $('#eventName').append(eventList[presentID].name);
+                $('#subtitle').append(eventList[presentID].subtitle);
+                $('#promo').append(eventList[presentID].promo);
+                $('#startDate').append(eventList[presentID].startDate);
+                $('#endDate').append(eventList[presentID].endDate);
+                $('#location').append(eventList[presentID].location);
+                $('#background').append(eventList[presentID].bgColor);
+                $('#eventTheme').append(eventList[presentID].theme);
 
 //                        "<tr class="+theme+"><td>" + quest.id + "</td><td>" + quest.eventId + "</td><td>"
 //                        + quest.name + "</td><td>" + quest.kind + "</td><td>"+quest.reward + "</td><td><div class='btn btnList'><p>List</p></div>"
