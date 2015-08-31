@@ -7,13 +7,13 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
 
-    <script src="../js/jquery.js"></script>
+    <!--<script src="../js/jquery.js"></script>-->
 
-    <script src="../js/bootstrap.min.js"></script>
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--<script src="../js/bootstrap.min.js"></script>-->
+    <!--<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
     <link id="loadCss" rel="stylesheet" href="questsList/questsList.css" type="text/css" >
 
     <meta charset="UTF-8">
@@ -37,7 +37,7 @@
             <thead>
             <tr class="subHeaderUp ">
                 <th>ID</th>
-                <th>Event deployment id</th>
+                <th>Event Id</th>
                 <th>Name</th>
                 <th>Kind</th>
                 <th>Reward</th>
@@ -53,11 +53,11 @@
 
 <script>
     $(document).ready(function(){
-        $.getJSON("../js/quests.json", function(result){
+        $.getJSON("js/quests.json", function(result){
             $.each(result, function(i, quest){
 
-                $('#questsList').append("<tr><td>" + quest.id + "</td><td>" + quest.eventDeploymentId + "</td><td>"
-                        +"<td>" + quest.name + "</td><td>" + quest.kind + "</td><td>"+quest.reward + "<div class='btn btnList'><p>List</p></div>"
+                $('#questsList').append("<tr><td>" + quest.id + "</td><td>" + quest.eventId + "</td><td>"
+                        + quest.name + "</td><td>" + quest.kind + "</td><td>"+quest.reward + "</td><td><div class='btn btnList'><p>List</p></div>"
                         + "<div class='btn btnEdit'><p>Edit</p></div>"
                         + "<div class='btn btnDelete'><p>Delete</p></div>"
                         + "</td></tr>");
