@@ -160,9 +160,7 @@
             // Load table data from event.json
             $(document).ready(function(){
                 $.getJSON("js/events.json", function(result){
-
                     $.each(result, function(i, dane){
-
                         for(var j=0;j<dane.length;j++) {
                             var theme = '';
                             if(dane[j].id % 2 == 0 ){
@@ -190,24 +188,26 @@
                     // Load the content of the page referenced in the a-tags href
                     $("#pageLoad").load(href);
                     console.log('pobieram Content');
+
                     // Prevent browsers default behavior to follow the link when clicked
                     return false;
                 }
             });
         </script>
+
         <script>
             // Catch the click on your <button> tag
-            $(".event").click('click', function( ){
-//                var href = $(this).attr('id');
-//                $("#pageLoad").load(href);
-//                console.log('id Buttona:'+ href);
-                console.log('cokolwiekPoKliknieciuButtona');
+            $('#eventsData').on('click', '.btnList' ,function() {
+                    var currentId = $(this).attr('id');
+                    console.log('id Buttona:'+ currentId);
 
-            });
+                    var href = 'eventInfo/eventInfo.html';
+                    $("#pageLoad").load(href);
+
+                    // Prevent browsers default behavior to follow the link when clicked
+                    return false;
+                });
         </script>
-
-
-
 
 </body>
 
