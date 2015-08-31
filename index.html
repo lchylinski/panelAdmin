@@ -34,8 +34,8 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+        <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
     <![endif]-->
 
     <!-- ColorPicker -->
@@ -136,6 +136,7 @@
              <!--#pageLoad ends!-->
         </div>
         <!-- .myCont ends!-->
+</div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -165,7 +166,7 @@
                             theme = 'theme';
                         }
                         $('#eventsData').append("<tr class=" + theme +"><td>" + dane.id + "</td><td>" + dane.name + "</td><td>"
-                                + "<div class='btn btnList'><p>Event Info</p></div>"
+                                + "<div class='btn btnList' id= " + dane.id + " ><p>Event Info</p></div>"
                                //+ "<div class='btn btnEdit'><p>Edit</p></div>"
                                 + "<div class='btn btnDelete'><p>Delete</p></div>"
                                 + "</td></tr>");
@@ -191,9 +192,14 @@
             });
         </script>
         <script>
-            // Catch the click on your a tag
-            $("a").click(function() {
-                    };
+            // Catch the click on your <button> tag
+            $(".btnList").click(function() {
+//                var href = $(this).attr('id');
+//                $("#pageLoad").load(href);
+//                console.log('id Buttona:'+ href);
+                console.log('cokolwiekPoKliknieciuButtona');
+
+            });
         </script>
 
 

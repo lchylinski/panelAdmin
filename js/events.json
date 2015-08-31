@@ -1,6 +1,22 @@
 [
-  {"id":"1", "name":"InfoShare 2015"},
-  {"id":"2", "name":"ScalaC"},
+  {"id":"1", "name":"InfoShare 2015", "info":{
+      "subtitle":"Tech & new media",
+      "promo":"Powered by Huntly",
+      "startDate":"",
+      "endDate":"",
+      "location":"",
+      "bgColor":"",
+      "theme":"RedTheme"
+    }},
+  {"id":"2", "name":"ScalaC", "info":{
+    "subtitle":"Tech Scala",
+    "promo":"Scalac Power",
+    "startDate":"",
+    "endDate":"",
+    "location":"",
+    "bgColor":"",
+    "theme":"RedTheme"
+  }},
   {"id":"3", "name":"Bolek"},
   {"id":"4", "name":"Bolek2"},
   {"id":"5", "name":"Codepot"},
