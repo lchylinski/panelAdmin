@@ -12,7 +12,7 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="eventInfo/eventInfo.css" type="text/css">
+    <link rel="stylesheet" href="eventInfo.css" type="text/css">
 </head>
 <body>
 <div class="wrapper">
@@ -27,8 +27,8 @@
             </div>
         </div>
         <div class="row headerDown">
-            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5 number">1</div>
-            <div class="col-lg-10 col-md-9 col-sm-8 col-xs-7 eventName">InfoShare 2015</div>
+            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-5 number" id="eventIdHead"></div>
+            <div class="col-lg-10 col-md-9 col-sm-8 col-xs-7 eventName" id="eventNameHead"></div>
         </div>
     </div>
     <div class="table-responsive">
@@ -51,7 +51,7 @@
                 <td class="name theme" id="promo"></td>
             </tr>
             <tr>
-                <td class="category">start date: </td>
+                <td class="category">Start date: </td>
                 <td class="name" id="startDate"></td>
             </tr>
             <tr>
@@ -73,7 +73,7 @@
             <tr>
                 <td></td>
                 <td class="quest">
-                    <div class="btn btnQuest">View quest list</div>
+                    <div class="btn btnQuest" id="eventQuestId">View quest list</div>
                 </td>
             </tr>
             </tbody>
@@ -83,7 +83,7 @@
 
 <script>
     $(document).ready(function(){
-        $.getJSON("js/events.json", function(result){
+        $.getJSON("../js/events.json", function(result){
             $.each(result, function(i, eventList){
 //                var theme = '';
 //                if(quest.id % 2 == 0 ){
@@ -93,7 +93,10 @@
                     var presentID = location.pathname.slice(-1);
                     parseInt(presentID);
                     presentID -= 1 ;
-                console.log(presentID);
+                console.log("presentID do tablicy tylko = " + presentID);
+
+                $('#eventIdHead').append(eventList[presentID].id);
+                $('#eventNameHead').append(eventList[presentID].name);
 
                 $('#eventId').append(eventList[presentID].id);
                 $('#eventName').append(eventList[presentID].name);
@@ -104,6 +107,9 @@
                 $('#location').append(eventList[presentID].location);
                 $('#background').append(eventList[presentID].bgColor);
                 $('#eventTheme').append(eventList[presentID].theme);
+
+                $('#eventQuestId').attr("id",eventList[presentID].id);
+
 
 //                        "<tr class="+theme+"><td>" + quest.id + "</td><td>" + quest.eventId + "</td><td>"
 //                        + quest.name + "</td><td>" + quest.kind + "</td><td>"+quest.reward + "</td><td><div class='btn btnList'><p>List</p></div>"

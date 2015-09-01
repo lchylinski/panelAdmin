@@ -5,34 +5,54 @@
       "name": "InfoShare 2015",
       "subtitle": "Tech & new media",
       "promo": "Powered by Huntly",
-      "startDate": "",
-      "endDate": "",
-      "location": "",
-      "bgColor": "",
-      "theme": "RedTheme"
-
+      "startDate": "02-3-2014",
+      "endDate": "08-02-2015",
+      "location": "Karlsruhe",
+      "bgColor": "#FFFFFF",
+      "theme": "RedTheme",
+      "quests" : [
+        {"QuestId":"104", "eventId":"1", "name":"Simpay.pl", "kind":"checkin","reward":"0"},
+        {"QuestId":"105", "eventId":"1", "name":"Acxiom", "kind":"checkin","reward":"0"},
+        {"QuestId":"106", "eventId":"1", "name":"AIP/BL", "kind":"checkin","reward":"0"},
+        {"id":"107", "eventId":"1", "name":"IBM", "kind":"checkin","reward":"0"},
+        {"id":"108", "eventId":"1", "name":"Intel", "kind":"checkin","reward":"0"}
+      ]
     },
     {
       "id": "2",
       "name": "ScalaC",
       "subtitle": "Tech Scala",
       "promo": "Scalac Power",
-      "startDate": "",
-      "endDate": "",
-      "location": "",
-      "bgColor": "",
-      "theme": "RedTheme"
+      "startDate": "02-3-2014",
+      "endDate": "08-02-2015",
+      "location": "Karlsruhe",
+      "bgColor": "#FFFFFF",
+      "theme": "RedTheme",
+      "quests" : [
+        {"questId":"105", "eventId":"2", "name":"Robust", "kind":"checkin","reward":"700"},
+        {"questId":"125", "eventId":"2", "name":"Bonduelle", "kind":"checkin","reward":"400"},
+        {"questId":"206", "eventId":"2", "name":"Breezeblocks", "kind":"checkin","reward":"20"}
+      ]
     },
     {
       "id": "3",
       "name": "Bolek",
       "subtitle": "Tech Scala",
       "promo": "Scalac Power",
-      "startDate": "",
-      "endDate": "",
-      "location": "",
-      "bgColor": "",
-      "theme": "RedTheme"
+      "startDate": "02-3-2014",
+      "endDate": "08-02-2015",
+      "location": "Karlsruhe",
+      "bgColor": "#FFFFFF",
+      "theme": "RedTheme",
+      "quests" : [
+        {"questId":"135", "eventId":"3", "name":"Odie", "kind":"checkin","reward":"700"},
+        {"questId":"136", "eventId":"3", "name":"Bruce", "kind":"checkin","reward":"400"},
+        {"questId":"136", "eventId":"3", "name":"Bruce", "kind":"checkin","reward":"400"},
+        {"questId":"134", "eventId":"3", "name":"EXAMPLE", "kind":"checkin","reward":"400"},
+        {"questId":"136", "eventId":"3", "name":"Bruce", "kind":"checkin","reward":"400"},
+        {"questId":"136", "eventId":"3", "name":"Bruce", "kind":"checkin","reward":"400"},
+        {"questId":"137", "eventId":"3", "name":"Dodici", "kind":"checkin","reward":"20"}
+      ]
 
     },
     {
@@ -40,11 +60,15 @@
       "name": "Bolek2",
       "subtitle": "Tech Scala",
       "promo": "Scalac Power",
-      "startDate": "",
-      "endDate": "",
-      "location": "",
-      "bgColor": "",
-      "theme": "RedTheme"
+      "startDate": "02-01-2015",
+      "endDate": "08-02-2015",
+      "location": "Karlsruhe",
+      "bgColor": "#FFFFFF",
+      "theme": "RedTheme",
+      "quests" : [
+        {"questId":"145", "eventId":"4", "name":"NINA", "kind":"checkin","reward":"700"},
+        {"questId":"147", "eventId":"4", "name":"Pleasure", "kind":"checkin","reward":"20"}
+      ]
 
     },
     {
@@ -52,11 +76,20 @@
       "name": "Codepot",
       "subtitle": "Tech Scala",
       "promo": "Scalac Power",
-      "startDate": "",
-      "endDate": "",
-      "location": "",
-      "bgColor": "",
-      "theme": "RedTheme"
+      "startDate": "02-01-2015",
+      "endDate": "08-02-2015",
+      "location": "Karlsruhe",
+      "bgColor": "#FFFFFF",
+      "theme": "RedTheme",
+      "quests" : [
+        {"questId":"155", "eventId":"5", "name":"Simpay.pl", "kind":"checkin","reward":"700"},
+        {"questId":"156", "eventId":"5", "name":"SIMPAY", "kind":"checkin","reward":"400"},
+        {"questId":"156", "eventId":"5", "name":"SIMPAY", "kind":"checkin","reward":"400"},
+        {"questId":"154", "eventId":"5", "name":"Only_You", "kind":"checkin","reward":"400"},
+        {"questId":"156", "eventId":"5", "name":"SIMPAY", "kind":"checkin","reward":"400"},
+        {"questId":"156", "eventId":"5", "name":"SIMPAY", "kind":"checkin","reward":"400"},
+        {"questId":"157", "eventId":"5", "name":"Platnosci sms", "kind":"checkin","reward":"20"}
+      ]
 
     },
     {
@@ -65,11 +98,16 @@
       "info": {
         "subtitle": "Tech Scala",
         "promo": "Scalac Power",
-        "startDate": "",
-        "endDate": "",
-        "location": "",
-        "bgColor": "",
-        "theme": "RedTheme"
+        "startDate": "02-01-2015",
+        "endDate": "08-02-2015",
+        "location": "Karlsruhe",
+        "bgColor": "#FFFFFF",
+        "theme": "RedTheme",
+        "quests" : [
+          {"questId":"166", "eventId":"6", "name":"Simpay.pl", "kind":"checkin","reward":"700"},
+          {"questId":"166", "eventId":"6", "name":"SIMPAY", "kind":"checkin","reward":"400"},
+          {"questId":"167", "eventId":"6", "name":"Borubar", "kind":"checkin","reward":"20"}
+        ]
       }
     },
     {
@@ -77,11 +115,16 @@
       "name": "TweetUp",
       "subtitle": "Tech Scala",
       "promo": "Scalac Power",
-      "startDate": "",
-      "endDate": "",
-      "location": "",
-      "bgColor": "",
-      "theme": "RedTheme"
+      "startDate": "07-12-2014",
+      "endDate": "08-02-2015",
+      "location": "Karlsruhe",
+      "bgColor": "#FFFFFF",
+      "theme": "RedTheme",
+      "quests" : [
+        {"questId":"177", "eventId":"7", "name":"Mach's dir keine Sorge", "kind":"checkin","reward":"700"},
+        {"questId":"177", "eventId":"7", "name":"Benetton", "kind":"checkin","reward":"400"},
+        {"questId":"177", "eventId":"7", "name":"Olivia Center", "kind":"checkin","reward":"20"}
+      ]
 
     },
     {
@@ -89,11 +132,23 @@
       "name": "scala",
       "subtitle": "Tech Scala",
       "promo": "Scalac Power",
-      "startDate": "",
-      "endDate": "",
-      "location": "",
-      "bgColor": "",
-      "theme": "RedTheme"
+      "startDate": "07-12-2014",
+      "endDate": "08-02-2015",
+      "location": "Karlsruhe",
+      "bgColor": "#FFFFFF",
+      "theme": "RedTheme",
+      "quests" : [
+        {"questId":"185", "eventId":"8", "name":"Tondo", "kind":"checkin","reward":"700"},
+        {"questId":"186", "eventId":"8", "name":"Gira", "kind":"checkin","reward":"400"},
+        {"questId":"186", "eventId":"8", "name":"Gira", "kind":"checkin","reward":"400"},
+        {"questId":"184", "eventId":"8", "name":"EXAMPLE", "kind":"checkin","reward":"400"},
+        {"questId":"186", "eventId":"8", "name":"Gira", "kind":"checkin","reward":"400"},
+        {"questId":"186", "eventId":"8", "name":"Gira", "kind":"checkin","reward":"400"},
+        {"questId":"186", "eventId":"8", "name":"Gira", "kind":"checkin","reward":"400"},
+        {"questId":"186", "eventId":"8", "name":"Gira", "kind":"checkin","reward":"400"},
+        {"questId":"186", "eventId":"8", "name":"Gira", "kind":"checkin","reward":"400"},
+        {"questId":"187", "eventId":"8", "name":"Undici", "kind":"checkin","reward":"20"}
+      ]
 
     },
     {
@@ -101,11 +156,23 @@
       "name": "ShineBright",
       "subtitle": "Tech Scala",
       "promo": "Scalac Power",
-      "startDate": "",
-      "endDate": "",
-      "location": "",
-      "bgColor": "",
-      "theme": "RedTheme"
+      "startDate": "07-12-2014",
+      "endDate": "08-02-2015",
+      "location": "Karlsruhe",
+      "bgColor": "#FFFFFF",
+      "theme": "RedTheme",
+      "quests" : [
+        {"questId":"195", "eventId":"9", "name":"Simpay.pl", "kind":"checkin","reward":"700"},
+        {"questId":"196", "eventId":"9", "name":"Simpay", "kind":"checkin","reward":"400"},
+        {"questId":"196", "eventId":"9", "name":"Simpay", "kind":"checkin","reward":"400"},
+        {"questId":"194", "eventId":"9", "name":"EXAMPLE", "kind":"checkin","reward":"400"},
+        {"questId":"196", "eventId":"9", "name":"Simpay", "kind":"checkin","reward":"400"},
+        {"questId":"196", "eventId":"9", "name":"Simpay", "kind":"checkin","reward":"400"},
+        {"questId":"196", "eventId":"9", "name":"Simpay", "kind":"checkin","reward":"400"},
+        {"questId":"196", "eventId":"9", "name":"Simpay", "kind":"checkin","reward":"400"},
+        {"questId":"196", "eventId":"9", "name":"Gira", "kind":"checkin","reward":"400"},
+        {"questId":"197", "eventId":"9", "name":"Undici", "kind":"checkin","reward":"20"}
+      ]
       }
 
   ]

@@ -1,0 +1,18 @@
+[
+  {"id":"105", "eventId":"1", "name":"Acxiom", "kind":"checkin","reward":"0"},
+  {"id":"106", "eventId":"1", "name":"AIP/BL", "kind":"checkin","reward":"0"},
+  {"id":"107", "eventId":"1", "name":"Amazon", "kind":"checkin","reward":"0"},
+  {"id":"108", "eventId":"1", "name":"Atena", "kind":"checkin","reward":"0"},
+  {"id":"109", "eventId":"1", "name":"Beyond", "kind":"checkin","reward":"0"},
+  {"id":"110", "eventId":"1", "name":"BlaBlaCar", "kind":"checkin","reward":"0"},
+  {"id":"111", "eventId":"1", "name":"Blue Media", "kind":"checkin","reward":"0"},
+  {"id":"112", "eventId":"1", "name":"Comarach", "kind":"checkin","reward":"0"},
+  {"id":"113", "eventId":"1", "name":"Dynatrace", "kind":"checkin","reward":"0"},
+  {"id":"114", "eventId":"1", "name":"EPAM", "kind":"checkin","reward":"0"},
+  {"id":"115", "eventId":"1", "name":"Exea", "kind":"checkin","reward":"0"},
+  {"id":"116", "eventId":"1", "name":"eZ systems", "kind":"checkin","reward":"0"},
+  {"id":"117", "eventId":"1", "name":"GetResponse", "kind":"checkin","reward":"0"},
+  {"id":"118", "eventId":"1", "name":"Honeti", "kind":"checkin","reward":"0"},
+  {"id":"119", "eventId":"1", "name":"IBM", "kind":"checkin","reward":"0"},
+  {"id":"120", "eventId":"1", "name":"Intel", "kind":"checkin","reward":"0"}
+]
